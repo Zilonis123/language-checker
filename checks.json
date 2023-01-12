@@ -27,6 +27,38 @@
         {
             "language": "Rust",
             "execute": ["cargo", "--version"]
+        },
+        {
+            "language": "Elixir",
+            "execute": ["elixir", "--version"]
+        },
+        {
+            "language": "Java",
+            "execute": ["Java", "--version"]
+        },
+        {
+            "language": "PHP",
+            "execute": ["php", "-v"]
+        },
+        {
+            "language": "Go",
+            "execute": ["Go", "version"]
+        },
+        {
+            "language": "Kotlin",
+            "execute": ["Kotlinc"]
+        },
+        {
+            "language": "Swift",
+            "execute": ["swift", "language", "version"]
+        },
+        {
+            "language": "Dart",
+            "execute": ["dart", "--version"]
+        },
+        {
+            "language": "Scala",
+            "execute": ["scala", "-version"]
         }
     ]
 }
