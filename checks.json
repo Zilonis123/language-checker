@@ -1,0 +1,32 @@
+{
+    "checks": [
+        {
+            "language": "python",
+            "execute": ["python", "--version"]
+        },
+        {
+            "language": "node.js",
+            "execute": ["node", "--version"]
+        },
+        {
+            "language": "C++",
+            "execute": ["g++", "-v"]
+        },
+        {
+            "language": "C#",
+            "execute": ["dotnet", "--list-sdks"]
+        },
+        {
+            "language": "C",
+            "execute": ["gcc", "-v"]
+        },
+        {
+            "language": "Ruby",
+            "execute": ["ruby", "-v"]
+        },
+        {
+            "language": "Rust",
+            "execute": ["cargo", "--version"]
+        }
+    ]
+}
