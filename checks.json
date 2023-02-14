@@ -21,6 +21,10 @@
             "execute": ["gcc", "-v"]
         },
         {
+            "language": "Deno",
+            "execute": ["deno", "--version"]
+        },
+        {
             "language": "Ruby",
             "execute": ["ruby", "-v"]
         },
