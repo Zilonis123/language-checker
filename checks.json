@@ -63,6 +63,34 @@
         {
             "language": "Scala",
             "execute": ["scala", "-version"]
+        },
+        {
+            "language": "COBOL",
+            "execute": ["cobc", "-v"]
+        },
+        {
+            "language": "Perl",
+            "execute": ["perl", "-v"]
+        },
+        {
+            "language": "TypeScript",
+            "execute": ["tsc", "--version"]
+        },
+        {
+            "language": "R",
+            "execute": ["R", "--version"]
+        },
+        {
+            "language": "MATLAB",
+            "execute": ["matlab", "-version"]
+        },
+        {
+            "language": "Julia",
+            "execute": ["julia", "--version"]
+        },
+        {
+            "language": "SHELL",
+            "execute": ["echo", "$SHELL"]
         }
     ]
 }

@@ -29,10 +29,12 @@ for check in checks:
     # 2.1
     found.append(check["language"])
 
-for language in found:
+for language in sorted(found):
     color = colored("+", "green")
     print("[" + color + "] " + language + " was found.")
 
-for language in notfound:
+for language in sorted(notfound):
     color = colored("-", "red");
     print("[" + color + "] " + language + " was NOT found.")
+
+# print a goodbye message
