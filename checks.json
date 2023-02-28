@@ -91,6 +91,14 @@
         {
             "language": "SHELL",
             "execute": ["echo", "$SHELL"]
+        },
+        {
+            "language": "F#",
+            "execute": ["fsharpc", "--version"]
+        },
+        {
+            "language": "Crystal",
+            "execute": ["crystal", "--version"]
         }
     ]
 }

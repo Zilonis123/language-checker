@@ -16,3 +16,9 @@ To use this application use this command.
 ```sh
 python main.py
 ```
+
+## Basic customisation
+Here are some flags you can add to the command
+```
+-o or -onlyFound flags will display only the found languages.
+```
