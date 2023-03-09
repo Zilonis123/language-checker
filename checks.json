@@ -99,6 +99,91 @@
         {
             "language": "Crystal",
             "execute": ["crystal", "--version"]
+        },
+        {
+            "language": "Haskell",
+            "execute": ["ghc", "--version"]
+        },
+        {
+            "language": "Lua",
+            "execute": ["lua", "-v"]
+        },
+        {
+            "language": "Groovy",
+            "execute": ["groovy", "-version"]
+        },
+        {
+            "language": "Clojure",
+            "execute": ["clojure", "-e", "(clojure-version)"]
+        },
+        {
+            "language": "OCaml",
+            "execute": ["ocaml", "-version"]
+        },
+        {
+            "language": "Scheme",
+            "execute": ["scheme", "--version"]
+        },
+        {
+            "language": "Prolog",
+            "execute": ["swipl", "--version"]
+        },
+        {
+            "language": "Smalltalk",
+            "execute": ["gst", "--version"]
+        },
+        {
+            "language": "Erlang",
+            "execute": ["erl", "-eval", "'erlang:display(erlang:system_info(otp_release)), halt().'", "-noshell"]
+        },
+        {
+            "language": "Objective-C",
+            "execute": ["clang", "-v"]
+        },
+        {
+            "language": "Julia",
+            "execute": ["julia", "-v"]
+        },
+        {
+            "language": "LuaJIT",
+            "execute": ["luajit", "-v"]
+        },
+        {
+            "language": "CoffeeScript",
+            "execute": ["coffee", "-v"]
+        },
+        {
+            "language": "Forth",
+            "execute": ["gforth", "--version"]
+        },
+        {
+            "language": "PowerShell",
+            "execute": ["pwsh", "-v"]
+        },
+        {
+            "language": "Haxe",
+            "execute": ["haxe", "-version"]
+        },
+        {
+            "language": "Scheme",
+            "execute": ["chicken", "--version"]
+        },
+        {
+            "language": "Bash",
+            "execute": ["bash", "--version"]
+        },
+        {
+            "language": "Zsh",
+            "execute": ["zsh", "--version"]
+        },
+        {
+            "language": "Fish",
+            "execute": ["fish", "--version"]
+        },
+        {
+            "language": "Tcl",
+            "execute": ["tclsh", "<<< 'puts [info patchlevel]'"]
         }
+        
     ]
 }

@@ -9,7 +9,7 @@ from cli_args_system import Args
 def main():
     args = Args(convert_numbers=False)
 
-    onlyFound = bool(args.flags_names("o"))
+    onlyFound = args.flags_content(("o", "only")).exist
 
 
     with open("checks.json", "r", encoding="utf-8") as data_file:
