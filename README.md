@@ -1,9 +1,9 @@
 # Language checker
-This is a python application that checks your computer for coding languages. When it is done checking it will print the found and not found languages in the console.
-[Output preview](./img/preview.PNG)
+This is a python application that checks your computer for coding languages and prints them in the console.
+<img src="img/preview.png">
 
 ## Requirements
-To use this application [python](https://www.python.org) has to be installed.
+[Python](https://www.python.org) is required!
 
 ### Installation
 To install the requirements use this command.
@@ -11,14 +11,7 @@ To install the requirements use this command.
 pip install -r requirements.txt
 ```
 
-## usage
-To use this application use this command.
+### usage
 ```sh
 python main.py
-```
-
-## Basic customisation
-Here are some flags you can add to the command
-```
--o or -onlyFound flags will display only the found languages.
 ```

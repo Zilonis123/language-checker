@@ -1,51 +1,32 @@
-# import the dependencies
-import subprocess
-import json
+import subprocess, json
 from termcolor import colored
-from cli_args_system import Args
 
-
+def check_language_installation(language_info: dict) -> bool:
+    try:
+        execute_command = " ".join(language_info["execute"])
+        subprocess.run(execute_command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        return True
+    except subprocess.CalledProcessError:
+        return False
 
 def main():
-    args = Args(convert_numbers=False)
+    # Load JSON file
+    with open("checks.json", "r") as json_file:
+        data: dict = json.load(json_file)
 
-    onlyFound = args.flags_content(("o", "only")).exist
+    found_langs = []
 
+    # Check each language
+    for language_info in data["checks"]:
+        found: bool = check_language_installation(language_info)
+        if found:
+            found_langs.append(language_info["language"])
+        # clearconsole()
 
-    with open("checks.json", "r", encoding="utf-8") as data_file:
-        checks = json.load(data_file).get("checks")
-
-    found = []
-    notfound = []
-    for check in checks:
-        # steps
-        # 1. execute the command
-        # 2. check if the command didn't return an error
-        # 2.1 it didn't - add the found language to the list
-        # 2.2 it did - add the found to the notfound
-
-        # 1.
-        res = subprocess.run(check["execute"], shell=True)
-
-        # clear the terminal
-        subprocess.run(["cls"], shell=True)
-        # 2.
-        if res.returncode == 1:
-            # 2.2
-            notfound.append(check["language"])
-            continue;
-
-        # 2.1
-        found.append(check["language"])
-
-    for language in sorted(found):
-        color = colored("+", "green")
-        print("[" + color + "] " + language.capitalize() + " was found.")
-
-    if not onlyFound:
-        for language in sorted(notfound):
-            color = colored("-", "red");
-            print("[" + color + "] " + language.capitalize() + " was NOT found.")
+    # Display results
+    color = colored("+", "green")
+    for lang in found_langs:
+        print(f"{color} {lang.capitalize()}")
 
 if __name__ == "__main__":
     main()
