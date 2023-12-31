@@ -26,7 +26,7 @@ def background_check(args, data: dict):
 
         if found and not args.onlynotfound:
             print(f"{plus} {lang}")
-        elif args.notfound or args.onlynotfound:
+        elif args.notfound or (args.onlynotfound and not found):
             print(f"{minus} {lang}")
 
 def oneline_check(args, data: dict):
