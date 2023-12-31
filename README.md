@@ -15,3 +15,9 @@ pip install -r requirements.txt
 ```sh
 python main.py
 ```
+
+## Flags / Instructions
+For a detailed list of commands/flags run
+```sh
+python main.py -h
+```
