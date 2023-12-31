@@ -2,7 +2,8 @@
     "checks": [
         {
             "language": "python",
-            "execute": ["python", "--version"]
+            "execute": ["python", "--version"],
+            "execute2": ["python3", "--version"]
         },
         {
             "language": "node.js",

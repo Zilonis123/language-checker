@@ -1,9 +1,9 @@
 import subprocess, json
 from termcolor import colored
 
-def check_language_installation(language_info: dict) -> bool:
+def check_language_installation(exec: list[str]) -> bool:
     try:
-        execute_command: str = " ".join(language_info["execute"])
+        execute_command: str = " ".join(exec)
         subprocess.run(execute_command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         return True
     except subprocess.CalledProcessError:
@@ -18,7 +18,11 @@ def main():
     plus: str = colored("+", "green")
     # Check each language
     for language_info in data["checks"]:
-        found: bool = check_language_installation(language_info)
+        found: bool = check_language_installation(language_info["execute"])
+
+        if not found and language_info.get("execute2", False):
+            # in some cases languages may differ between operating systems
+            found: bool = check_language_installation(language_info["execute2"])
 
         if found:
             # Display results
