@@ -166,7 +166,7 @@
             "execute": ["haxe", "-version"]
         },
         {
-            "language": "Scheme",
+            "language": "Scheme Compiler",
             "execute": ["chicken", "--version"]
         },
         {
